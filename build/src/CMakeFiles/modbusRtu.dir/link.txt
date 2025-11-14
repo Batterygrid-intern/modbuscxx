@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmodbusRtu.a CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o
+/usr/bin/ranlib libmodbusRtu.a
