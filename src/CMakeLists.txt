@@ -1,4 +1,4 @@
-add_library(modbusRtu modbusrtu.cpp)
+add_library(modbusRtu modbusRtu.cpp)
 
 target_include_directories(modbusRtu
 	PUBLIC

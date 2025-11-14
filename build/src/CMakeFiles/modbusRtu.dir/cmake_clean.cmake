@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o"
-  "CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o.d"
+  "CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o"
+  "CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o.d"
   "libmodbusRtu.a"
   "libmodbusRtu.pdb"
 )

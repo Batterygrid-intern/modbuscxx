@@ -130,29 +130,29 @@ modbusRtu/fast:
 	cd /home/ludvig/ws/bgs-ws/modbusRTU/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modbusRtu.dir/build.make src/CMakeFiles/modbusRtu.dir/build
 .PHONY : modbusRtu/fast
 
-modbusrtu.o: modbusrtu.cpp.o
-.PHONY : modbusrtu.o
+modbusRtu.o: modbusRtu.cpp.o
+.PHONY : modbusRtu.o
 
 # target to build an object file
-modbusrtu.cpp.o:
-	cd /home/ludvig/ws/bgs-ws/modbusRTU/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modbusRtu.dir/build.make src/CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o
-.PHONY : modbusrtu.cpp.o
+modbusRtu.cpp.o:
+	cd /home/ludvig/ws/bgs-ws/modbusRTU/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modbusRtu.dir/build.make src/CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o
+.PHONY : modbusRtu.cpp.o
 
-modbusrtu.i: modbusrtu.cpp.i
-.PHONY : modbusrtu.i
+modbusRtu.i: modbusRtu.cpp.i
+.PHONY : modbusRtu.i
 
 # target to preprocess a source file
-modbusrtu.cpp.i:
-	cd /home/ludvig/ws/bgs-ws/modbusRTU/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modbusRtu.dir/build.make src/CMakeFiles/modbusRtu.dir/modbusrtu.cpp.i
-.PHONY : modbusrtu.cpp.i
+modbusRtu.cpp.i:
+	cd /home/ludvig/ws/bgs-ws/modbusRTU/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modbusRtu.dir/build.make src/CMakeFiles/modbusRtu.dir/modbusRtu.cpp.i
+.PHONY : modbusRtu.cpp.i
 
-modbusrtu.s: modbusrtu.cpp.s
-.PHONY : modbusrtu.s
+modbusRtu.s: modbusRtu.cpp.s
+.PHONY : modbusRtu.s
 
 # target to generate assembly for a file
-modbusrtu.cpp.s:
-	cd /home/ludvig/ws/bgs-ws/modbusRTU/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modbusRtu.dir/build.make src/CMakeFiles/modbusRtu.dir/modbusrtu.cpp.s
-.PHONY : modbusrtu.cpp.s
+modbusRtu.cpp.s:
+	cd /home/ludvig/ws/bgs-ws/modbusRTU/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/modbusRtu.dir/build.make src/CMakeFiles/modbusRtu.dir/modbusRtu.cpp.s
+.PHONY : modbusRtu.cpp.s
 
 # Help Target
 help:
@@ -163,9 +163,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... modbusRtu"
-	@echo "... modbusrtu.o"
-	@echo "... modbusrtu.i"
-	@echo "... modbusrtu.s"
+	@echo "... modbusRtu.o"
+	@echo "... modbusRtu.i"
+	@echo "... modbusRtu.s"
 .PHONY : help
 
 

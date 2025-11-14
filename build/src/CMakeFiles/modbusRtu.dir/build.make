@@ -69,28 +69,28 @@ include src/CMakeFiles/modbusRtu.dir/progress.make
 # Include the compile flags for this target's objects.
 include src/CMakeFiles/modbusRtu.dir/flags.make
 
-src/CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o: src/CMakeFiles/modbusRtu.dir/flags.make
-src/CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o: /home/ludvig/ws/bgs-ws/modbusRTU/src/modbusrtu.cpp
-src/CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o: src/CMakeFiles/modbusRtu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ludvig/ws/bgs-ws/modbusRTU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o"
-	cd /home/ludvig/ws/bgs-ws/modbusRTU/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o -MF CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o.d -o CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o -c /home/ludvig/ws/bgs-ws/modbusRTU/src/modbusrtu.cpp
+src/CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o: src/CMakeFiles/modbusRtu.dir/flags.make
+src/CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o: /home/ludvig/ws/bgs-ws/modbusRTU/src/modbusRtu.cpp
+src/CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o: src/CMakeFiles/modbusRtu.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ludvig/ws/bgs-ws/modbusRTU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o"
+	cd /home/ludvig/ws/bgs-ws/modbusRTU/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o -MF CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o.d -o CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o -c /home/ludvig/ws/bgs-ws/modbusRTU/src/modbusRtu.cpp
 
-src/CMakeFiles/modbusRtu.dir/modbusrtu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/modbusRtu.dir/modbusrtu.cpp.i"
-	cd /home/ludvig/ws/bgs-ws/modbusRTU/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ludvig/ws/bgs-ws/modbusRTU/src/modbusrtu.cpp > CMakeFiles/modbusRtu.dir/modbusrtu.cpp.i
+src/CMakeFiles/modbusRtu.dir/modbusRtu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/modbusRtu.dir/modbusRtu.cpp.i"
+	cd /home/ludvig/ws/bgs-ws/modbusRTU/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ludvig/ws/bgs-ws/modbusRTU/src/modbusRtu.cpp > CMakeFiles/modbusRtu.dir/modbusRtu.cpp.i
 
-src/CMakeFiles/modbusRtu.dir/modbusrtu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/modbusRtu.dir/modbusrtu.cpp.s"
-	cd /home/ludvig/ws/bgs-ws/modbusRTU/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ludvig/ws/bgs-ws/modbusRTU/src/modbusrtu.cpp -o CMakeFiles/modbusRtu.dir/modbusrtu.cpp.s
+src/CMakeFiles/modbusRtu.dir/modbusRtu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/modbusRtu.dir/modbusRtu.cpp.s"
+	cd /home/ludvig/ws/bgs-ws/modbusRTU/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ludvig/ws/bgs-ws/modbusRTU/src/modbusRtu.cpp -o CMakeFiles/modbusRtu.dir/modbusRtu.cpp.s
 
 # Object files for target modbusRtu
 modbusRtu_OBJECTS = \
-"CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o"
+"CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o"
 
 # External object files for target modbusRtu
 modbusRtu_EXTERNAL_OBJECTS =
 
-src/libmodbusRtu.a: src/CMakeFiles/modbusRtu.dir/modbusrtu.cpp.o
+src/libmodbusRtu.a: src/CMakeFiles/modbusRtu.dir/modbusRtu.cpp.o
 src/libmodbusRtu.a: src/CMakeFiles/modbusRtu.dir/build.make
 src/libmodbusRtu.a: src/CMakeFiles/modbusRtu.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ludvig/ws/bgs-ws/modbusRTU/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libmodbusRtu.a"

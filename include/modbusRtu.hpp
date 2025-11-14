@@ -1,5 +1,6 @@
 #include <modbus/modbus.h>
-
+#include <stdexcept>
+#include <iostream>
 
 class modbusRtu {
     public:
@@ -7,7 +8,7 @@ class modbusRtu {
         modbusRtu(const char *device, int baud, char parity, int data_bit, int stop_bit );
         ~modbusRtu();
 
-        bool modbusRtuConn(modbus_t *ctx);
+        bool connect();
 
     private:
         modbus_t *ctx_;
