@@ -6,12 +6,11 @@ modbusRtu::modbusRtu(const char* device, int baud,char parity,int data_bit,int s
         throw std::runtime_error("failed to create modbus rtu context");
     }
 }
-
 modbusRtu::~modbusRtu(){
 }
-
 bool modbusRtu::connect(){
     return false;
 }
+
 
 
