@@ -21,26 +21,30 @@ bool modbusRtu::connect(){
     }
     return true;
 }
-
 // när ska man allokera heap minne och när stack minne? 
-std::vector<uint16_t> modbusRtu::read_values(int site_id, int start_r, int num_of_r ){
-    std::vector<uint16_t> values;
-    int MAX_SIZE = num_of_r*sizeof(uint16_t);
-    uint16_t buffer[MAX_SIZE];
-    //set slave id to read from
+void modbusRtu::read_values(int site_id, int start_r, int num_of_r,uint16_t *buffer ){
     if(modbus_set_slave(ctx_,site_id) == -1){
         throw std::runtime_error("invalid slave id");    
     }
-    //read registers from until
+    //read registers from until (is this code 0x03?)
     if(modbus_read_registers(ctx_,start_r,num_of_r,buffer) == -1){
         throw std::runtime_error("failed to read registers");
     }
     //save all data read in vector 
-    for(int i = 0; i < num_of_r ; i) {
-        values.push_back(buffer[i]);
-    }
-    return values;
 }
+
+std::vector<float> modbusRtu::transform_to_floats(const uint16_t *readings_buf, int start_index, int last_index){
+    std::vector<float> value;
+    for(int i = start_index; i < last_index;i++){
+       value.push_back(modbus_get_float_abcd(readings_buf));
+    }
+
+    return value;
+}
+
+
+
+
 
 
 
