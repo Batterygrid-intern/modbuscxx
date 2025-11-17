@@ -9,11 +9,10 @@ class modbusRtu {
         ~modbusRtu();
 
         bool connect();
-        //read floats
-        
-       std::vector<uint16_t> read_float(int site_id,int register);
 
-
+        //read values stored store in vector (for floating point numbers data will be stored in 2 following registers) 
+        std::vector<uint16_t> read_values(int site_id, int start_r,int num_of_r);
+        std::vector<float> transform_to_floats(std::vector<uint16_t> data, int start_index, int last_index);
     private:
         modbus_t *ctx_;
 };
