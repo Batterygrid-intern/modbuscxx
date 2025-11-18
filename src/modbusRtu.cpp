@@ -5,7 +5,9 @@ modbusRtu::modbusRtu(const char* device, int baud,char parity,int data_bit,int s
     //setup your parameters to the modbus_t struct
     ctx_ = modbus_new_rtu(device, baud, parity, data_bit, stop_bit);
     if(ctx_ == nullptr){
-        throw std::runtime_error("failed to create modbus rtu context");
+        std::string error_msg = std::string("failed to set modbus parameters: ") + modbus_strerror(errno);
+        std::cerr << error_msg << std::endl;
+        throw std::runtime_error(error_msg);
     }
 }
 modbusRtu::~modbusRtu(){
@@ -16,7 +18,9 @@ modbusRtu::~modbusRtu(){
 // bool eller void? bygga sig flexibel?
 bool modbusRtu::connect(){
     if(modbus_connect(ctx_) == -1){
-        throw std::runtime_error("failed to connect to modbus slave");
+        std::string error_msg = std::string("failed to connect to modbus slave: ") + modbus_strerror(errno);
+        std::cerr << error_msg << std::endl;
+        throw std::runtime_error(error_msg);
         return false;
     }
     return true;
@@ -24,11 +28,15 @@ bool modbusRtu::connect(){
 // när ska man allokera heap minne och när stack minne? 
 void modbusRtu::read_values(int site_id, int start_r, int num_of_r,uint16_t *buffer ){
     if(modbus_set_slave(ctx_,site_id) == -1){
-        throw std::runtime_error("invalid slave id");    
+        std::string error_msg = std::string("failed to set slave_id: ") + modbus_strerror(errno);
+        std::cerr << error_msg << std::endl;
+        throw std::runtime_error(error_msg);    
     } 
     //read registers from until (is this code 0x03?)
     if(modbus_read_registers(ctx_,start_r,num_of_r,buffer) == -1){
-        throw std::runtime_error("failed to read registers");
+        std::string error_msg = std::string("failed to read registers: ") + modbus_strerror(errno);
+        std::cerr << error_msg << std::endl;
+        throw std::runtime_error(error_msg);
     }
     //save all data read in vector 
 }
