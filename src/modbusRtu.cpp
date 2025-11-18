@@ -25,20 +25,19 @@ bool modbusRtu::connect(){
 void modbusRtu::read_values(int site_id, int start_r, int num_of_r,uint16_t *buffer ){
     if(modbus_set_slave(ctx_,site_id) == -1){
         throw std::runtime_error("invalid slave id");    
-    }
+    } 
     //read registers from until (is this code 0x03?)
     if(modbus_read_registers(ctx_,start_r,num_of_r,buffer) == -1){
         throw std::runtime_error("failed to read registers");
     }
     //save all data read in vector 
 }
-
+//transform data to floats
 std::vector<float> modbusRtu::transform_to_floats(const uint16_t *readings_buf, int start_index, int last_index){
     std::vector<float> value;
-    for(int i = start_index; i < last_index;i++){
-       value.push_back(modbus_get_float_abcd(readings_buf));
+    for(int i = start_index; i <=last_index;i+=2){
+       value.push_back(modbus_get_float_abcd(&readings_buf[i]));
     }
-
     return value;
 }
 
