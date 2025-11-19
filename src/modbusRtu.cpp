@@ -26,7 +26,7 @@ bool modbusRtu::connect(){
     return true;
 }
 // när ska man allokera heap minne och när stack minne? 
-void modbusRtu::read_values(int site_id, int start_r, int num_of_r,uint16_t *buffer ){
+void modbusRtu::read_values(int site_id, int start_r, int num_of_r,uint16_t *buffer){
     if(modbus_set_slave(ctx_,site_id) == -1){
         std::string error_msg = std::string("failed to set slave_id: ") + modbus_strerror(errno);
         std::cerr << error_msg << std::endl;
@@ -40,14 +40,19 @@ void modbusRtu::read_values(int site_id, int start_r, int num_of_r,uint16_t *buf
     }
     //save all data read in vector 
 }
+
+float modbusRtu::transform_to_float(const uint16_t *reading_buf,int position){
+    return modbus_get_float_abcd(&reading_buf[position]);      
+}
+
 //transform data to floats
-std::vector<float> modbusRtu::transform_to_floats(const uint16_t *readings_buf, int start_index, int last_index){
+/*std::vector<float> modbusRtu::transform_to_floats(const uint16_t *readings_buf, int start_index, int last_index){
     std::vector<float> value;
     for(int i = start_index; i <=last_index;i+=2){
        value.push_back(modbus_get_float_abcd(&readings_buf[i]));
     }
     return value;
-}
+}*/
 
 
 

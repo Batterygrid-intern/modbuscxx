@@ -13,7 +13,7 @@ class modbusRtu {
 
         //read values stored store in vector (for floating point numbers data will be stored in 2 following registers) 
         void read_values(int site_id, int start_r,int num_of_r,uint16_t *buffer);
-        std::vector<float> transform_to_floats(const uint16_t *readings_buf, int start_index, int last_index);
+        float transform_to_float(const uint16_t *readings_buf, int position);
     private:
         modbus_t *ctx_;
 };
