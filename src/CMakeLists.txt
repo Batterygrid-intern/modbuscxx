@@ -13,7 +13,7 @@ add_library(modbuscxx::modbusRtu ALIAS modbusRtu)
 # Set include directories
 target_include_directories(modbusRtu
 	PUBLIC
-	    $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/include>
+	    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
 	    $<INSTALL_INTERFACE:include>
 	PRIVATE
 	    ${MODBUS_INCLUDE_DIRS}
