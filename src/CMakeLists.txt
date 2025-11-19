@@ -8,7 +8,7 @@ endif()
 
 # Create library (static or shared based on BUILD_SHARED_LIBS)
 add_library(modbusRtu modbusRtu.cpp)
-add_library(modbusRtu::modbusRtu ALIAS modbusRtu)
+add_library(modbuscxx::modbusRtu ALIAS modbusRtu)
 
 # Set include directories
 target_include_directories(modbusRtu
