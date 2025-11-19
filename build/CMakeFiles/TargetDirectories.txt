@@ -1,5 +1,0 @@
-/home/ludvig/ws/bgs-ws/modbusRTU/build/CMakeFiles/edit_cache.dir
-/home/ludvig/ws/bgs-ws/modbusRTU/build/CMakeFiles/rebuild_cache.dir
-/home/ludvig/ws/bgs-ws/modbusRTU/build/src/CMakeFiles/modbusRtu.dir
-/home/ludvig/ws/bgs-ws/modbusRTU/build/src/CMakeFiles/edit_cache.dir
-/home/ludvig/ws/bgs-ws/modbusRTU/build/src/CMakeFiles/rebuild_cache.dir
